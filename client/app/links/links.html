@@ -1,3 +1,19 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller="LinksController">
+  <button ng-click="goToShortenPage()">Shorten Page</button>
+
+  <table>
+    <tr ng-repeat="data in data.links">
+      <td>
+        <a href="http://localhost:8000/api/links/{{data.code}}">
+          {{ data.title }}:
+        </a>
+      </td>
+      <td>
+        <a href="http://localhost:8000/api/links/{{data.code}}">
+          http://localhost:8000/api/links/{{ data.code }}
+        </a>
+      </td>
+    </tr>
+  </table>
+
 </div>

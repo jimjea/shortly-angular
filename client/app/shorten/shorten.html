@@ -1,6 +1,7 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div id='container' ng-controller="ShortenController">
+  <button ng-click="goToLinkPage()">Link Page</button>
+  <form ng-submit="addLink()">
+    Links: <input type="url" name="user" ng-model="link.url">
+    <input type="submit">
+  </form>
 </div>
-
-
