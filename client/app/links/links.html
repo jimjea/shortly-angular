@@ -1,17 +1,23 @@
 <div id='container' ng-controller="LinksController">
   <button ng-click="goToShortenPage()">Shorten Page</button>
   <input ng-model="search">
-
+  <h1 font-family="arial">Links</h1>
   <table>
-    <tr ng-repeat="data in data.links | filter:search">
+    <tr ng-repeat="data in data.links | filter:search | orderBy: 'visits': true" height="50px">
       <td>
-        <a href="http://localhost:8000/api/links/{{data.code}}">
-          {{ data.title }}:
+        <a href="http://localhost:8000/api/links/{{data.code}}" class="url">
+        <img src="../assets/redirect_icon.png" height="30px">
+          {{ data.url }}:
         </a>
       </td>
       <td>
-        <a href="http://localhost:8000/api/links/{{data.code}}">
+        <a href="http://localhost:8000/api/links/{{data.code}}" class="shortLink">
           http://localhost:8000/api/links/{{ data.code }}
+        </a>
+      </td>
+      <td>
+        <a href="http://localhost:8000/api/links/{{data.code}}" class="visits">
+          {{ data.visits }}
         </a>
       </td>
     </tr>

@@ -5,6 +5,7 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function () {
     $scope.loading = true;
     Links.linkSender($scope.link).then(function() {
+      $scope.link.url = '';
       $scope.loading = false;
       console.log("Message Sent!");
     });

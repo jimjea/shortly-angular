@@ -1,5 +1,8 @@
 <div id='signin'>
   <h1>sigin</h1>
+  <h2 ng-model="failedLogin">
+    {{ failedLogin }}
+  </h2>
   <form name="signinForm" ng-submit='signin()'>
     <input type='text'ng-model='user.username'>
     <input type="password" ng-model='user.password'>

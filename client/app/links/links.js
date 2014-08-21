@@ -6,12 +6,14 @@ angular.module('shortly.links', [])
     Links.linkGetter()
       .then(function(data) {
         $scope.data.links = data;
+        console.log(data)
       }).catch(function(err) {
-        console.error(err, " Error Found");
-      })
+        console.error(err, "Error Found");
+      });
   };
   $scope.getLinks();
   $scope.goToShortenPage = function() {
     $location.path('/shorten');
   };
 });
+

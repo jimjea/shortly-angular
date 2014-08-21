@@ -1,6 +1,8 @@
 body {
   margin: 0;
   margin-top: 10px;
+  background-image: url("../assets/background.png");
+  background-size: cover;
   font-family: arial, sans-serif;
 }
 
@@ -41,11 +43,11 @@ h1 {
 }
 
 .navigation li a:hover {
-  background-color: #ddd;
+  /*background-color: #ddd;*/
 }
 
 .navigation li a.selected {
-  background-color: #ccc;
+  /*background-color: #ccc;*/
 }
 
 #container {
@@ -140,4 +142,24 @@ input[type=url] {
 
 .creator .message {
   clear: both;
+}
+
+.visits {
+  font-size: 100px;
+}
+
+.url {
+  font-size: 25px;
+}
+
+.shortLink {
+  font-size: 18px;
+  position: relative;
+  left: 60%;
+}
+
+.visits {
+  font-size: 25px;
+  position: relative;
+  left: 250px;
 }
