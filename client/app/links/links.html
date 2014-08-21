@@ -1,8 +1,9 @@
 <div id='container' ng-controller="LinksController">
   <button ng-click="goToShortenPage()">Shorten Page</button>
+  <input ng-model="search">
 
   <table>
-    <tr ng-repeat="data in data.links">
+    <tr ng-repeat="data in data.links | filter:search">
       <td>
         <a href="http://localhost:8000/api/links/{{data.code}}">
           {{ data.title }}:
